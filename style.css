@@ -78,7 +78,7 @@ html, body { height: 100%; }
     left: 196px;
     top: 590px;
     padding: 16px 36px;
-    background: #936632;
+    background: linear-gradient(90deg, #936632, #DBBB86 50%, #CFAC76);
     color: white;
     border-radius: 6px;
     text-decoration: none;
@@ -167,7 +167,7 @@ html, body { height: 100%; }
     max-width: 260px;
     padding: 12px 16px;
     border-radius: 8px;
-    background: linear-gradient(90deg, #b88a3c, #e9d3a5);
+    background: linear-gradient(90deg, #b88a3c, #e9d3a5, #e9d3a5);
     color: white;
     text-decoration: none;
     font-weight: 700;
