@@ -1,0 +1,213 @@
+
+@font-face { font-family: 'Alexandria'; src: url('Assets/fonts/Alexandria-ExtraBold.ttf') format('truetype'); font-weight:800; font-display:swap; }
+@font-face { font-family: 'Figtree'; src: url('Assets/fonts/Figtree-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+
+
+.desktop-wrapper,
+.mobile-wrapper {
+  display: none;
+}
+
+
+@media (min-width: 769px) {
+  body {
+    margin: 0;
+    overflow: hidden; 
+    font-family: 'Figtree', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background: #f5f5f5;
+  }
+
+  .desktop-wrapper {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  .bg-desktop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+
+  .logo-desktop { position: absolute; left: 800px; top: 25px; width: 50vw; max-width: 2000px; z-index: 5; pointer-events: none; }
+  .mockup-desktop { position: absolute; left: calc(810px); top: -40px; width: 75vw; max-width: 1112px; z-index: 4; pointer-events: none; }
+  .divisor-desktop { position: absolute; left: -1000px; top: 900px; width: 3000px; z-index: 3; pointer-events: none; }
+
+  .desktop-content { position: relative; z-index: 20; pointer-events: auto; }
+
+  .titulo-desktop {
+    position: absolute;
+    left: 196px;
+    top: 244px;
+    width: 795px;
+    font-family: 'Alexandria', 'Figtree', sans-serif;
+    font-size: 96px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.95;
+    background: linear-gradient(180deg, #936632, #DBBB86 50%, #CFAC76);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 25;
+  }
+
+  .subtitulo-desktop {
+    position: absolute;
+    left: 196px;
+    top: 450px;
+    width: 823px;
+    font-size: 32px;
+    color: #936632;
+    z-index: 25;
+  }
+
+  .btn-desktop {
+    position: absolute;
+    left: 196px;
+    top: 590px;
+    padding: 16px 36px;
+    background: #936632;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 25;
+    font-family: 'Alexandria', sans-serif;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    font-family: 'Figtree', system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+ 
+  .desktop-wrapper { display: none !important; }
+  .mobile-wrapper { display: block; min-height: 100vh; position: relative; width: 100%; }
+
+ 
+  .mobile-wrapper {
+    background-image: url("Assets/images/background-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+ 
+  .mockup-mobile {
+    display: block;
+    position: absolute;
+    top: -50px;               
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    max-width: 420px;
+    z-index: 1;               
+    pointer-events: none;
+  }
+
+  
+  .logo-mobile {
+    display: block;
+    position: relative;
+    margin: 140px auto 8px;   
+    width: auto;
+    max-width: 220px;
+    z-index: 2;
+  }
+
+  
+  .mobile-content {
+    position: relative;
+    z-index: 3;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 8px 16px 60px;
+    text-align: center;
+  }
+
+  .titulo-mobile {
+    font-family: 'Alexandria', 'Figtree', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-top: 6px;
+    background: linear-gradient(180deg, #936632, #DBBB86 50%, #CFAC76);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitulo-mobile {
+    font-size: 14px;
+    color: #7A674A;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+
+  .btn-mobile {
+    display: inline-block;
+    margin: 20px auto 28px;
+    width: 85%;
+    max-width: 260px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #b88a3c, #e9d3a5);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Alexandria', sans-serif;
+  }
+
+  .footer-mobile {
+    display: block;
+    width: 100%;
+    height: 36px;
+    background: linear-gradient(90deg, #b88a3c, #e9d3a5);
+    position: relative;
+    margin-top: 145px;
+    z-index: 2;
+  }
+}
+
+
+
+
+@media (max-width: 500px) {
+
+.mockup-mobile {
+  position: relative !important;   
+  width: 105vw;
+  height: auto;
+  display: block;
+  margin: 0 calc(-1vw) 0;
+  top: 0;
+  left: 0;
+  transform: none !important;      
+  z-index: 5;
+}
+
+
+
+
+  .logo-mobile { margin-top: -150px; max-width: 200px; width: 45%; }
+  .mobile-content { padding-bottom: 80px; }
+  .titulo-mobile { font-size: 24px; }
+  .subtitulo-mobile { font-size: 13px; max-width: 280px; margin: 12px 0 18px 12px; line-height: 1.4; }
+  .btn-mobile { width: 90%; padding: 10px 12px; }
+}
